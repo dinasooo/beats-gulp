@@ -1,0 +1,11 @@
+.modal{
+    display: none;
+    text-align: center;
+    &.error-modal{
+        color: red;
+    }
+}
+
+.modal__content{
+    margin-bottom: rem(25px);
+}

@@ -1,0 +1,37 @@
+$main-color: #000;
+$containerWidth:940px;
+$baseFontSize: 16px;
+
+@function rem($px){
+    @return $px / $baseFontSize + 0rem;
+}
+
+@mixin tablets{
+    @media screen and (max-width: $tablets){
+        @content;
+    }
+}
+
+@mixin phones{
+    @media screen and (max-width: $phones){
+        @content;
+    }
+}
+
+//breakpoints
+
+$tablets: 768px;
+$phones: 480px;
+
+// colors
+$gray: #F5F5F5;
+$hoverRed: #CA1B36;
+$red: #E01F3D;
+
+$fontAlegreya: 'Alegreya Sans', sans-serif;
+
+//z-indexes
+$z-fixed-menu: 100;
+
+@import './blocks/*.scss';
+@import './lay/*.scss'

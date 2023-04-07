@@ -1,0 +1,98 @@
+.crew__list--desktop{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    @include tablets{
+        display: none;
+    }
+}
+
+.crew__list--mobile{
+    display: none;
+
+    @include tablets{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.crew__item{
+    margin-right: rem(20px);
+    text-align: center;
+    position: relative;
+
+    &:last-child{
+        margin-right: 0;
+    }
+        
+    @include tablets{
+        margin-bottom: rem(14px);
+        margin-right: 0;
+        max-width: rem(222px);
+    }
+}
+
+.crew__photo{
+    margin-bottom: rem(25px);
+
+    @include tablets{
+        overflow: hidden;
+        margin-bottom: rem(21px);
+    }
+
+    @include phones{
+        margin-bottom: rem(18px);
+    }
+}
+
+.crew__button{
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+    margin-bottom: rem(11px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.crew__triangle{
+    width: rem(9px);
+    height: rem(9px);
+    margin-left: rem(4px);
+}
+
+.crew__name{
+    font-size: rem(18px);
+    font-weight: 700;
+    line-height: rem(21px);
+}
+
+.crew__info{
+    height: 0;
+    overflow: hidden;
+    transition: height .3s;
+    position: absolute;
+    left: 0;
+    width: 100%;
+
+    @include tablets{
+        right: 34%;
+        position: static;
+    }
+}
+.crew__job{
+    line-height: rem(19px);
+    margin-bottom: rem(4px);
+
+    @include tablets{
+        font-weight: 700;
+        font-size: rem(18px);
+    }
+}
+
+.crew__desc{
+    color: #666666;
+}

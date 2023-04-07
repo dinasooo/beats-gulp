@@ -1,0 +1,25 @@
+.contacts{
+    font-style: normal;
+    align-items: center;
+
+    @include phones{
+        margin-bottom: rem(14px);
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.contacts__links{
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: rem(18px);
+    color: #292929;
+
+    @include phones{
+        font-size: rem(16px);
+    }
+}
+
+.contscts__icon{
+    margin-right: rem(7px);
+}

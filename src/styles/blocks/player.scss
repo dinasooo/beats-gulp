@@ -1,0 +1,103 @@
+.player__block {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#video {
+    max-width: rem(662px);
+    object-fit: cover;
+
+    @include tablets {
+        max-width: rem(594px);
+    }
+
+    @include phones {
+        max-width: rem(394px);
+    }
+}
+
+.player__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    visibility: visible;
+    height: rem(71px);
+
+    @include phones {
+        height: rem(65px);
+    }
+
+    &--active {
+        visibility: hidden;
+    }
+}
+
+.player__controls {
+    height: rem(35px);
+    width: rem(662px);
+    background-color: #151515;
+    position: absolute;
+    top: 91%;
+    display: flex;
+    align-items: center;
+
+    @include tablets {
+        height: rem(31px);
+        width: rem(594px);
+    }
+
+    @include phones {
+        height: rem(21px);
+        width: rem(394px);
+    }
+}
+.player__icon {
+    height: rem(16px);
+    width: rem(11px);
+    cursor: pointer;
+    margin-right: rem(20px);
+    margin-left: rem(17px);
+
+    @include phones {
+        height: rem(9.5px);
+        width: rem(6.5px);
+    }
+}
+.player__sound {
+    display: flex;
+    align-items: center;
+    margin: 0 rem(14px);
+}
+
+.player__volume {
+    display: flex;
+
+}
+
+.player__duration {
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    &--length {
+        width: 100%;
+        height: rem(4px);
+        border-radius: rem(1px);
+        background: #333333;
+        appearance: none;
+        outline: none;
+    }
+
+    &--length-vol {
+        width: rem(58px);
+        height: rem(4px);
+    }
+
+}

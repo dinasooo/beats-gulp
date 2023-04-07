@@ -1,0 +1,144 @@
+.reviews__display{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: rem(32px);
+
+    
+}
+
+.reviews__list{
+    position: relative;
+    overflow: hidden;
+
+    &::before{
+        content: "";
+        height: rem(79px);
+        width: rem(79px);
+        border-radius: 50%;
+        background: white;
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: rem(-55px);
+        z-index: 1;
+    }
+}
+
+.reviews__title{
+    text-align: center;
+    margin-bottom: rem(32px);
+}
+
+.reviews__item{
+    background:  #F5F5F5;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    position: absolute;
+    padding: rem(42px);
+
+    @include tablets{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: rem(56px) rem(24px) rem(40px);
+    }
+
+    &.active{
+        opacity: 1;
+        left: initial;
+        position: static;
+    }
+}
+
+.reviews__img{
+    width: rem(253px);
+    height: rem(264px);
+    margin-right: rem(35px);
+
+    @include tablets{
+    width: rem(130px);
+    height: rem(132px);
+    margin-right: 0;
+    margin-bottom: rem(32px);
+    }
+
+    @include phones{
+        margin-bottom: 1.2rem;
+    }
+}
+
+.reviews__photo{
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+.reviews__desc{
+    max-width: rem(456px);
+    padding-top: rem(33px);
+
+    @include tablets{
+        padding-top: 0;
+        max-width: initial;
+    }
+}
+
+.reviews__subtitle{
+    font-weight: 700;
+    font-size: rem(24px);
+    line-height: 1.16;
+    margin-bottom: rem(27px);
+
+    @include tablets{
+        margin-bottom: rem(16px);
+    }
+
+    @include phones{
+        margin-bottom: 0.5rem;
+    }
+}
+
+.reviews__text{
+    line-height: 1.2;
+    color: #666;
+    margin-bottom: rem(38px);
+
+    @include tablets{
+        margin-bottom: rem(16px);
+    }
+}
+
+.reviews__name{
+    font-weight: 700;
+    font-size: rem(18px);
+    line-height: 1.16;
+    color: black;
+}
+
+.reviews__switcher{
+    flex-direction: row;
+    display: flex;
+    justify-content: center
+}
+
+.reviews__switcher-item{
+    width: rem(74px);
+    height: rem(74px);
+    border-radius: 50%;
+    margin-right: rem(10px);
+    &.active, &:hover{
+        outline: 6px solid red;
+    } 
+}
+
+.reviews__switcher-icon{
+    width: rem(74px);
+    height: rem(74px);
+    border-radius: 50%;
+}
+

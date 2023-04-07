@@ -1,0 +1,16 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: rem(25px);
+
+    @include phones{
+        padding-right: 0;
+    }
+}
+
+.header .header__contacts{
+    @include tablets{
+        display: none;
+    }
+}

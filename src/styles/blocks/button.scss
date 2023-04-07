@@ -1,0 +1,37 @@
+.button{
+    color: white;
+    background: $red;
+    border-radius: rem(100px);
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+    padding: rem(18px) rem(41px);
+    cursor: pointer;
+    border: rem(1px) solid transparent;
+    &:hover{
+        background: $hoverRed;
+    }
+
+    @include phones{
+        padding: rem(21px) rem(41px);
+    }
+
+    &--transp{
+        background: transparent;
+        text-transform: none;
+        color: white;
+        padding: rem(18px) rem(8px);
+
+        &:hover{
+            background: none;
+            color: $hoverRed;
+        }
+    }
+
+    &--phones{
+        @include phones{
+            font-size: rem(19px);
+            line-height: 0.94;
+        }
+    }
+}
