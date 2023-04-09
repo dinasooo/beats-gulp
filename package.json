@@ -34,7 +34,12 @@
     "sass": "^1.60.0"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "bxslider": "^4.2.14",
     "jquery": "^3.6.4",
-    "normalize.css": "^8.0.1"
+    "jquery-touchswipe": "^1.6.19",
+    "mobile-detect": "^1.4.5",
+    "normalize.css": "^8.0.1",
+    "ymaps": "^0.2.1"
   }
 }
