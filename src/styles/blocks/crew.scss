@@ -44,7 +44,17 @@
 
     @include phones{
         margin-bottom: rem(18px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: rem(180px);
     }
+}
+
+.crew__img{
+    height: 100%;
+    // width: 100%;
+    object-fit: cover;
 }
 
 .crew__button{

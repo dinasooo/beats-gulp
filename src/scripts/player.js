@@ -2,6 +2,7 @@ let video;
 let durationControl;
 let soundControl;
 let intervalId;
+let soundLevel;
 
 document.addEventListener('DOMContentLoaded', e=>{
   video = document.getElementById('video');
